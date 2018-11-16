@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>@ApplicationScoped</p>
+            <h:inputText value="#{applicationScopedCDI.count}"/>
+            <p>Contador >  <h:outputText value="#{applicationScopedCDI.count}"/></p>
+            <!-- Perceba que ao apertar o botão "Enviar Requisição" é feito um redirect, e mesmo assim 
+                 o estado da página é mantido até que seja finalizado o ManagedBean -->
+            <h:commandButton action="applicationScoped.xhtml?faces-redirect=true" value="Enviar Requisição"/>
+            <br/>
+            <br/>
+            <h:commandLink value="Voltar" action="index.xhtml?faces-redirect=true"/>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandLink value="@RequestScoped" action="request.xhtml?faces-redirect=true"/>
+            <br/>
+            <br/>
+            <h:commandLink value="@SessionScoped" action="session.xhtml?faces-redirect=true"/>
+            <br/>
+            <br/>
+            <h:commandLink value="@ViewScoped" action="view.xhtml?faces-redirect=true"/>
+            <br/>
+            <br/>
+            <h:commandLink value="@ConversationScoped" action="conversationScoped.xhtml?faces-redirect=true"/>
+            <br/>
+            <br/>
+            <h:commandLink value="@ApplicationScoped" action="applicationScoped.xhtml?faces-redirect=true"/>
+            <br/>
+            <br/>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>@ViewScoped</p>
+            <h:inputText value="#{viewScopedCDI.count}"/>
+            <p>Contador >  <h:outputText value="#{viewScopedCDI.count}"/></p>
+            <h:commandButton action="#" value="Enviar Requisição / E permanecer da página"/>
+            <br/>
+            <!-- Você será redirecionado para mesma página, mas isso é o 
+            suficiente para que o ManagedBean perca todas as informações -->
+            <h:commandButton action="view.xhtml" value="Enviar Requisição / E sair da página"/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h:commandLink value="Voltar" action="index.xhtml?faces-redirect=true"/>
+        </h:form>
+    </h:body>
+</html>
