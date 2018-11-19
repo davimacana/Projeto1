@@ -1,0 +1,25 @@
+Usando como base o banco mysql.
+
+Realize o download o mysql:
+MySQL Community Edition (GPL)
+https://www.mysql.com/downloads/
+Faça a instalaçao padrão com:
+Connector ODBC 8.0
+MySQL Server 8.0
+MySQL Shell 8.0
+MySQL Workbench 8.0 CE
+
+Ps. Ao instalar, use como padrão a senha "root" para o usuário root.
+
+1. Crie seu schema usando o Workbench.
+2. Crie uma pasta no servidor para incluir o jar e o modules.xml do mysql.
+	2.1. no caminho C:\Servidores\wildfly-12.0.0.Final\modules\system\layers\base\com
+		2.2. Crie a pasta "mysql" e uma subpasta "main".
+		2.3. Dentro da past main, crie o arquivo module.xml e insira o jar do mysql. Conforme exemplo dentro do projeto.
+
+3. Abra deu standalone.xml e configure o datasource da aplicação, conforme exemplo:
+4. Dentro do seu projeto, crie o persistence xml.
+	4.1. Caso seja preciso, vá nas propriedades do projeto, projects facets e marque a opção jpa para que seja criado o percistence.
+	4.2. Dentro do persistence, siga o exemplo do projeto. 
+5. Faça o deploy do seu projeto e tente o acesso ao banco.
+6. Para o nosso exemplo, use o arquivos dados.sql
